@@ -30,6 +30,12 @@ def page_not_found(err):
     return render_template('404.html'), 404
 
 
+# NaixInfo Page
+@app.route('/naixInfo')
+@cache.cached()
+def naix_info():
+    return render_template(f"naixInfo.html")
+
 # Start Playing Page
 @app.route('/start-playing')
 @cache.cached()
