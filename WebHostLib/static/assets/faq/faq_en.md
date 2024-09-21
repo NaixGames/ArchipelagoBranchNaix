@@ -12,17 +12,11 @@ encounter in new and interesting ways.
 
 ## What is a multiworld?
 
-While a randomizer shuffles a game, a multiworld randomizer shuffles that game for multiple players. For example, in a
+While a randomizer shuffles a game, a multiworld randomizer shuffles different games for multiple players. For example, in a
 two player multiworld, players A and B each get their own randomized version of a game, called a world. In each
 player's game, they may find items which belong to the other player. If player A finds an item which belongs to
 player B, the item will be sent to player B's world over the internet. This creates a cooperative experience, requiring
 players to rely upon each other to complete their game.
-
-## What does multi-game mean?
-
-While a multiworld game traditionally requires all players to be playing the same game, a multi-game multiworld allows
-players to randomize any of the supported games, and send items between them. This allows players of different
-games to interact with one another in a single multiplayer environment. All this is handled by the server.
 
 ## That is cool! What games can I play?
 
@@ -55,7 +49,7 @@ Normally in Naix's server we play async games, so no pressure to be connected at
 ## I can't keep playing, do I ruin everyone's game?
 
 No! If you can't keep playing give the organizer a shout and he can release all the items from your game so people
-recieved them. No harm done.
+received them. No harm done.
 
 
 ## I want to participate but cant play in the following X days. Can I still play?
@@ -77,13 +71,12 @@ rules allowing certain items to be placed in normally unreachable locations, pro
 comfortable exploiting certain glitches in the game.
 
 
-## Where do I get the connection information? (THIS NEEDS UPDATE)
+## Where do I get the connection information?
 
-When the game is started I will post an achipelago room link and pin it. 
-Once you open it, it will open something that looks like the green image I have attached. 
-There you can see your username and also the room port (the number after archipelago.gg, so in that example, 57719)
+When the game is started I will post a multiworld room link and pin it on the discord server. 
+There you can see your username and also the room port (the number after http://naixmultiworld.duckdns.org/)
 
-To connect the data you need is your username (also called in games "slot name") and the port. Depending on the game is how you need to input that information. The port may not appear, and in that case where it says host you need to put archipelago.gg;XXXXX with XXXXX the port. Ask for help about this if you need to! I know it is confusing as I cannot put something that works for every game.
+To connect the data you need is your username (also called in games "slot name") and the port. Depending on the game is how you need to input that information. The port may not appear, and in that case where it says host you need to put naixmultiworld.duckdns.org:XXXXX with XXXXX the port. Ask for help about this if you need to! I know it is confusing as I cannot put something that works for every game.
 
 An IMPORTANT part is that the port number WILL change after some inactivity time. Open the room link again and input the port in your login information. You will be able to resume your game as normal. If the port number does not appear refresh the website and it should be loaded 
 
@@ -96,7 +89,7 @@ in another world. Thankfully the system has ways to help!
 There is a system of hints. Every couple items you collect you get hint points. 
 Get enough hint points and you can ask the system where is that glorious item you are missing to progress.
 
-How to use this system? Well you need to connect to a text client. How you connect depends a little bit on if your game has a text client or not. This could be a console inside the game (like Minecraft and Risk of Rain 2) or an external app. In the later case the text client looks something like the attached image. In some cases your game will require a text client to even play (and in that case you can use that same window to ask for hints) or you will need to download a text client from archipelago.gg. Connect there (using the information as in the last question) and you will be able to ask for hints.
+How to use this system? Well you need to connect to a text client. How you connect depends a little bit on if your game has a text client or not. This could be a console inside the game (like Minecraft and Risk of Rain 2) or an external app. In some cases your game will require a text client to even play (and in that case you can use that same window to ask for hints) or you will need to download a text client from archipelago.gg. Connect there (using the information as in the last question) and you will be able to ask for hints.
 
 For hints, input !hint NAME_OF_ITEM and the game will give you the location of the item in the whole game, or suggest an item with a similar name. If you dont know where to obtain that precious item or the exact name, ask arround and we will sort it out!
 
@@ -105,7 +98,7 @@ Another thing you can do if you are stuck and want to help ... it so play Sudoku
 
 ## I don't understand something/something is not clear, what do I do?
 
-Ask! Or roll with it for now! The first couple of times it is confusing to get the head arround how it all works. 
+Ask! Or roll with it for now! The first couple of times it is confusing to get the head around how it all works. 
 I promise it clicks after a game (reason why I have got people to keep playing multiple times 😛 ).
 
 If you think something is missing in this site please let me know so I can add it.

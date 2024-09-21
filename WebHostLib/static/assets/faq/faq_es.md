@@ -1,111 +1,106 @@
-# Preguntas frecuentes (Modificadas para el server de Naix! EN CONSTRUCCION) 
+# Preguntas frecuentes (Modificadas para el server de Naix!)
 
-## What is a randomizer?
+## Que es un randomizer?
 
-A randomizer is a modification of a game which reorganizes the items required to progress through that game. A
-normal play-through might require you to use item A to unlock item B, then C, and so forth. In a randomized
-game, you might first find item C, then A, then B.
+Un randomizer es una modificación de un juego que reorganiza los elementos necesarios para avanzar en ese juego. Un
+progreso normal puede requerir que uses el elemento A para desbloquear el elemento B, luego el C, y así sucesivamente. En un randomizer, 
+es posible que primero encuentres el elemento C, luego el A y luego el B.
 
-This transforms the game from a linear experience into a puzzle, presenting players with a new challenge each time they
-play. Putting items in non-standard locations can require the player to think about the game world and the items they
-encounter in new and interesting ways.
+Esto transforma el juego de una experiencia lineal a un rompecabezas, presentando a los jugadores un nuevo desafío cada vez que juegan.
+Colocar elementos en ubicaciones no estándar puede requerir que el jugador piense en el mundo del juego y los elementos que encuentren de maneras nuevas e interesantes.
 
-## What is a multiworld?
+## Que es un multiworld?
 
-While a randomizer shuffles a game, a multiworld randomizer shuffles that game for multiple players. For example, in a
-two player multiworld, players A and B each get their own randomized version of a game, called a world. In each
-player's game, they may find items which belong to the other player. If player A finds an item which belongs to
-player B, the item will be sent to player B's world over the internet. This creates a cooperative experience, requiring
-players to rely upon each other to complete their game.
+Mientras que un randomizer baraja un juego, un multiworld randomizer randomiza diferentes juegos para varios jugadores. Por ejemplo, en un
+Multimundo para dos jugadores, los jugadores A y B obtienen cada uno su propia versión aleatoria de su juego. Luego cada uno en su juego puede 
+encontrar elementos que pertenecen al otro jugador. Si el jugador A encuentra un objeto que pertenece a
+jugador B, el artículo se enviará al mundo del jugador B a través de Internet. Esto crea una experiencia cooperativa, que requiere
+que los jugadores dependan unos de otros para completar su juego.
 
-## What does multi-game mean?
+## Eso suena bacan! Que juegos puedo jugar?
 
-While a multiworld game traditionally requires all players to be playing the same game, a multi-game multiworld allows
-players to randomize any of the supported games, and send items between them. This allows players of different
-games to interact with one another in a single multiplayer environment. All this is handled by the server.
+Hay una lista de juegos soportados para el server de Naix [aqui](/games). Esto incluye todos los juegos soportados
+por el server principal de Archipelago, pero ademas incluye otros que estan en estado beta, pero suficientemente
+estables para ser jugados sin mayores problemas.
 
-## That is cool! What games can I play?
+## Puedo generar un juego de un solo jugador con este sistema?
 
-Here is a list of games supported by Naix's server [Supported Games](/games). This includes all games supported in the
-official archipelago server, plus a couple that are on beta state, but are "stable enough" to be used on a multiworld game.
+Si, todos los juegos pueden ser generados para jugar por un personas. Pero porfavor no usen este server para ello,
+si no que usen el server official de [Archipelago](https://archipelago.gg).
 
-## Can I generate a single-player game with Archipelago?
+## Como comienzo a jugar?
 
-Yes. All of the supported games can be generated as single-player experiences. However, please don't use this mirror
-for this, and instead use the official [Archipelago](https://archipelago.gg) site.
+Si vienen del Discord de Naix este sitio web y el server deberia tener informacion para introducir los sistemas. Trata
+de seguir las instrucciones y todo deberia salir bien!
 
-## How do I get started?
+Si no vienen del Discord de Naix, porfavor refierence el sitio principal de [Archipelago](https://archipelago.gg).
 
-If you come from Naix's server, there you should get some instructions to slowly ease you into this system. Follow
-the instructions there and you should be good!
+## Tinen que estar todos conectados al mismo tiempo?
 
-Again, if you don't came from there, refer to the official [Archipelago](https://archipelago.gg) site to start.
+Hay dos tipos de forma de jugar juegos multiworld. Las session puede ser con todos los jugadores jugando al mismo
+tiempo (llamado "sync)" o con los jugadores jugando a su propio paso (llamado "async"). El setup para ambos es identico,
+pero la diferencia es el estilo de juego y como la gente ser organiza para jugar. Normalmente se decide el formato antes
+de comenzar el multiworld.
 
-## Does everyone need to be connected at the same time?
+Normalmente, en el server de Naix jugamos juegos async, asi que no hay presion de conectarse a una hora particular.
 
-There are two different play-styles that are common for Archipelago multiworld sessions. These sessions can either
-be considered synchronous (or "sync"), where everyone connects and plays at the same time, or asynchronous (or "async"),
-where players connect and play at their own pace. The setup for both is identical. The difference in play-style is how
-you and your friends choose to organize and play your multiworld. Most groups decide on the format before creating
-their multiworld.
+## No puedo seguir jugando, arruino el juego para el resto?
 
-Normally in Naix's server we play async games, so no pressure to be connected at the same time.
+No! Si no puedes seguir jugando manda un mensaje el organizador y el puede liberar todos los itemes de tu juego
+a la gente que debia recibirlos. Si bien no es la gracia, no hay ningun daño mayor en hacer eso.
 
 
-## I can't keep playing, do I ruin everyone's game?
+## Quiero participar, pero no puedo jugar en los proximos X dias. Puedo participar de todas formas?
 
-No! If you can't keep playing give the organizer a shout and he can release all the items from your game so people
-recieved them. No harm done.
+Si! Pero porfavor haznos saber que es el caso. Dado que nos hemos quedamos pegados por gente no respondiendo 
+en el paso, en el server de Naix nos reservamos el derecho de liberar un juego si la gente no responde por cierta cantidad de dias.
 
+## Hay algunos terminos que deberia conocer?
 
-## I want to participate but cant play in the following X days. Can I still play?
+Si, los multiworld tienen ciertos terminos que son normalmente usados para jugar y puedes verlos [aqui](/glossary/es).
 
-Yes! But please let us know when that is the case. Given that we have been getting stuck behind people not answering in the pass, in Naix's server
-we reserve the right to liberate games if people stop answering at all after a couple of days.
+## Que pasa si el item queda en un lugar imposible de acceder?
 
-## What are some common terms I should know?
+El randomizer sigue ciertas reglas logicas del juego cuando genera donde va cada item. La principal function de estas
+reglas es permitir que los juegos siempre puedan ser resueltos. Estas reglas pueden ser cambiadas, para considerer
+el uso de glitchess o skips si asi se desea.
 
-As randomizers and multiworld randomizers have been around for a while now, there are quite a few common terms used
-by the communities surrounding them. A list of Archipelago jargon and terms commonly used by the community can be
-found in the [Glossary](/glossary/en).
+## Donde consigo la informacion para conectar mi juego al servidor?
 
-## What happens if an item is placed somewhere it is impossible to get?
+Cuando el juego comienza voy a poner y pinnear un link a un room en el server de Discord.
+Abriendo eso pueden ver si usuario y el Puerto del room (que deberia ser un numero que sale despues de http://naixmultiworld.duckdns.org/)
 
-The randomizer has many strict sets of rules it must follow when generating a game. One of the functions of these rules
-is to ensure items necessary to complete the game will be accessible to the player. Many games also have a subset of
-rules allowing certain items to be placed in normally unreachable locations, provided the player has indicated they are
-comfortable exploiting certain glitches in the game.
+Para conectarse en el juego necesitan su usuario (a veces llamado "slot name") y el puerto del cuarto. Dependiendo el juego es como Deben
+introducer esta informacion. Un lugar para poner el puerto puede no aparecer, en aquel caso hay que usar como servidor
+naixmultiworld.duckdns.org:XXXXX con XXXXX el numero del puerto. 
 
+Pidan ayuda si necesitan! Se que esta parte es un poco confusa, pero la interfaz cambia por cada juego, asi que no puedo poner algo que sea 
+preciso para todos aqui.
 
-## Where do I get the connection information? (THIS NEEDS UPDATE)
+Un detalle importante es que el numero de puerto puede cambiar si nadie juega por un par de horas. Abran el link del cuarto denuevo para revisar
+nuevamente cual es y ver si cambia. Tambien, el cuarto se cierra despues de un par de horas de inactividad, abriendo el link abre el room denuevo.
 
-When the game is started I will post an achipelago room link and pin it. 
-Once you open it, it will open something that looks like the green image I have attached. 
-There you can see your username and also the room port (the number after archipelago.gg, so in that example, 57719)
+## Que pasa si me quedo pegado en mi juego? 
 
-To connect the data you need is your username (also called in games "slot name") and the port. Depending on the game is how you need to input that information. The port may not appear, and in that case where it says host you need to put archipelago.gg;XXXXX with XXXXX the port. Ask for help about this if you need to! I know it is confusing as I cannot put something that works for every game.
+Esta situacion es totalmente comun si te faltan itemes, que posiblemente estan en otros juegos de otros jugadores y quizas quien sabe donde.
+Por suerte, el multiworld tiene un sistema para ayudar!
 
-An IMPORTANT part is that the port number WILL change after some inactivity time. Open the room link again and input the port in your login information. You will be able to resume your game as normal. If the port number does not appear refresh the website and it should be loaded 
+Hay un systema de hints y puntos. Cada vez que uno collecciona un item en su propio juego, cada hint points. Colleciona suficientes y 
+puedes pedir un hint al servidor, pudiendo saber donde esta el hermoso item que te falta.
 
+Para usar este sistema hay que conectarse al servidor con un text client. Como se conectes depende de tu juego, hay algunos que usan un text client
+para conectarse al servidor de base para jugar, otros que lo tienen integrado dentro del juego y otros que no tienen nada de esa indole. Denuevo, esto
+varia un poco por juego, pero en el servidor podemos ayudar a eso.
 
-## What happens if I get stuck while playing? 
+Para pedir hints una vez tienen la consola, ponga !hint NOMBRE_DEL_ITEM y la consola les dira la posicion del item en el multiworld. Si no sabes
+cual es el nombre exacto del item, pregunten! 
 
-A situation that might happen is that you get stuck in your game. It is not uncommon to miss an item because it might be 
-in another world. Thankfully the system has ways to help!
+Otra cosa que se puede hacer si estan pegados … es jugador Sudoku! Hay una app que se conecta el servidor y que permite jugar Sudoku, y ganar hints
+cada vez que se complete uno. Pregunten si esto es algo que les interesa.
 
-There is a system of hints. Every couple items you collect you get hint points. 
-Get enough hint points and you can ask the system where is that glorious item you are missing to progress.
+## Hay algo que no entiendo que no esta claro, que hago?
 
-How to use this system? Well you need to connect to a text client. How you connect depends a little bit on if your game has a text client or not. This could be a console inside the game (like Minecraft and Risk of Rain 2) or an external app. In the later case the text client looks something like the attached image. In some cases your game will require a text client to even play (and in that case you can use that same window to ask for hints) or you will need to download a text client from archipelago.gg. Connect there (using the information as in the last question) and you will be able to ask for hints.
+Pregunten! O … sigan adelante deseando lo major! Las primeras veces es confuse entender como todo esto funciona. Les prometon tiene
+mas sentido despues de algunos juegos (razon por la cual la gente sigue jugando en el server 😛 ).
 
-For hints, input !hint NAME_OF_ITEM and the game will give you the location of the item in the whole game, or suggest an item with a similar name. If you dont know where to obtain that precious item or the exact name, ask arround and we will sort it out!
-
-Another thing you can do if you are stuck and want to help ... it so play Sudoku! There is an app that connect to the server (same way as before) and allows you to play Sudoku. If you complete it, you will give us a free random hint for the game, wooo!
-
-
-## I don't understand something/something is not clear, what do I do?
-
-Ask! Or roll with it for now! The first couple of times it is confusing to get the head arround how it all works. 
-I promise it clicks after a game (reason why I have got people to keep playing multiple times 😛 ).
-
-If you think something is missing in this site please let me know so I can add it.
+Si hay algo que creen me falta en este sitio, diganme para agregarlo!
