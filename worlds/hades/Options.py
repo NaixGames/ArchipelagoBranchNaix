@@ -1,12 +1,15 @@
 from dataclasses import dataclass
 from typing import Dict, Any
-from Options import Range, Toggle, DeathLink, Choice, StartInventoryPool, PerGameCommonOptions
+from Options import Range, Toggle, DeathLink, Choice, StartInventoryPool, PerGameCommonOptions,  OptionGroup, \
+    DefaultOnToggle
 
 # -----------------------Settings for Gameplay decisions ---------------
 
+
 class InitialWeapon(Choice):
     """
-    Chose your initial weapon. Note you are not be able to equip the sword in the weapon hub in WeaponSanity
+    Chooses your initial weapon. Note you are not be able to equip the sword in the weapon hub in WeaponSanity until
+    you unlock it.
     """
     display_name = "Weapon"
     option_Sword = 0
@@ -16,85 +19,76 @@ class InitialWeapon(Choice):
     option_Fist = 4
     option_Gun = 5
 
+
 class LocationSystem(Choice):
     """
-    Chose how the game gives you items. (1) RoomBased gives items on every new room completed. (2) ScoreBased
+    Chooses how the game gives you items. (1) RoomBased gives items on every new room completed. (2) ScoreBased
     gives items according to score obtained by clearing rooms (even repeated ones). (3) RoomWeaponBased gives
-    items on every new room completed with a new weapon (so more locations than the original room based system)
+    items on every new room completed with a new weapon (so more locations than the original room based system).
     """
     display_name = "Location System"
-    option_roombased = 1
-    option_scorebased = 2
-    option_roomweaponbased = 3
+    option_room_based = 1
+    option_score_based = 2
+    option_room_weapon_based = 3
     default = 1
-    
+
 
 class ScoreRewardsAmount(Range):
     """
-    When using score based system, this sets how many checks are available based on the score. 
-    Each room in hades gives "its depth" in score when completed, and each new check needs one more 
-    point to be unlocked (so check 10 needs 10 points, which can be obtained, for example, 
+    When using score based system, this sets how many checks are available based on the score.
+    Each room in hades gives "its depth" in score when completed, and each new check needs one more
+    point to be unlocked (so check 10 needs 10 points, which can be obtained, for example,
     by completing rooms 5 and 6)
     """
     display_name = "ScoreRewardsAmount"
     range_start = 72
     range_end = 1000
-    default = 300
+    default = 150
 
-class KeepsakeSanity(Toggle):
+
+class KeepsakeSanity(DefaultOnToggle):
     """
-    Shuffles NPCs' keepsakes into the item pool, eand makes each keepsake location a check. 
+    Shuffles NPCs' keepsakes into the item pool, and makes each keepsake location a check. 
     For simplicity this does not affects Hades and Persephone.
     """
     display_name = "KeepsakeSanity"
-    option_true = 1
-    option_false = 0
-    default = 1
     
-class WeaponSanity(Toggle):
+
+class WeaponSanity(DefaultOnToggle):
     """
-    Shuffles weapons (except your initial weapon) into the item pool, and makes obtaining 
-    each weapon at the House Contractor's shop a check. 
+    Shuffles weapons (except your initial weapon) into the item pool, and makes obtaining
+    each weapon at the House Contractor's shop a check.
     Need to be sent the weapon item to gain the skill to equip them.
     """
     display_name = "WeaponSanity"
-    option_true = 1
-    option_false = 0
-    default = 1 
     
-class HiddenAspectSanity(Toggle):
+
+class HiddenAspectSanity(DefaultOnToggle):
     """
     Shuffles weapon aspects into the item pool, and makes obtaining each aspect a check 
     (which needs to be unlocked before being able to be bought).
     """
     display_name = "HiddenAspectSanity"
-    option_true = 1
-    option_false = 0
-    default = 1 
 
-class StoreSanity(Toggle):
+
+class StoreSanity(DefaultOnToggle):
     """
     Shuffles important items from the House Contractor's shop in the item pool.
     Need to be sent the items to gain the different perks that make runs easier.
     """
     display_name = "StoreSanity"
-    option_true = 1
-    option_false = 0
-    default = 1 
     
-class FateSanity(Toggle):
+
+class FateSanity(DefaultOnToggle):
     """
     Shuffles most rewards from the Fated List of Prophecies into the item pool, 
     and makes the corresponding items from the list a check. 
     Can make the games significantly longer.
     """
     display_name = "FateSanity"
-    option_true = 1
-    option_false = 0
-    default = 1 
-
 
 # -------------------- Endgame settings
+
 
 class HadesDefeatsNeeded(Range):
     """
@@ -105,6 +99,7 @@ class HadesDefeatsNeeded(Range):
     range_end = 20
     default = 1
 
+
 class WeaponsClearsNeeded(Range):
     """
     How many different weapons clears are needed to win the world.
@@ -114,6 +109,7 @@ class WeaponsClearsNeeded(Range):
     range_end = 6
     default = 1
     
+
 class KeepsakesNeeded(Range):
     """
     How many different keepsake unlocks are needed to win the world.
@@ -122,6 +118,7 @@ class KeepsakesNeeded(Range):
     range_start = 0
     range_end = 23
     default = 0
+
 
 class FatesNeeded(Range):
     """
@@ -144,9 +141,9 @@ class HeatSystem(Choice):
     (then the following options related to pacts do nothing).
     """
     display_name = "Heat System"
-    option_reverseheat = 1
-    option_minimalheat = 2
-    option_vanilllaheat = 3
+    option_reverse_heat = 1
+    option_minimal_heat = 2
+    option_vanillla_heat = 3
     default = 1
 
 
@@ -158,7 +155,7 @@ class HardLaborPactAmount(Range):
     range_start = 0
     range_end = 5
     default = 3
-    internal_name = "HardLaborPactLevel"
+
 
 class LastingConsequencesPactAmount(Range):
     """
@@ -168,7 +165,7 @@ class LastingConsequencesPactAmount(Range):
     range_start = 0
     range_end = 4
     default = 2
-    internal_name = "LastingConsequencesPactLevel"
+
 
 class ConvenienceFeePactAmount(Range):
     """
@@ -178,7 +175,7 @@ class ConvenienceFeePactAmount(Range):
     range_start = 0
     range_end = 2
     default = 1
-    internal_name = "ConvenienceFeePactLevel"
+
 
 class JurySummonsPactAmount(Range):
     """
@@ -188,7 +185,7 @@ class JurySummonsPactAmount(Range):
     range_start = 0
     range_end = 3
     default = 2
-    internal_name = "JurySummonsPactLevel"
+
 
 class ExtremeMeasuresPactAmount(Range):
     """
@@ -198,7 +195,7 @@ class ExtremeMeasuresPactAmount(Range):
     range_start = 0
     range_end = 4
     default = 2
-    internal_name = "ExtremeMeasuresPactLevel"
+
 
 class CalisthenicsProgramPactAmount(Range):
     """
@@ -208,7 +205,7 @@ class CalisthenicsProgramPactAmount(Range):
     range_start = 0
     range_end = 2
     default = 1
-    internal_name = "CalisthenicsProgramPactLevel"
+
 
 class BenefitsPackagePactAmount(Range):
     """
@@ -218,7 +215,7 @@ class BenefitsPackagePactAmount(Range):
     range_start = 0
     range_end = 2
     default = 1
-    internal_name = "BenefitsPackagePactLevel"
+
 
 class MiddleManagementPactAmount(Range):
     """
@@ -228,7 +225,7 @@ class MiddleManagementPactAmount(Range):
     range_start = 0
     range_end = 1
     default = 1
-    internal_name = "MiddleManagementPactLevel"
+
 
 class UnderworldCustomsPactAmount(Range):
     """
@@ -238,7 +235,7 @@ class UnderworldCustomsPactAmount(Range):
     range_start = 0
     range_end = 1
     default = 1
-    internal_name = "UnderworldCustomsPactLevel"
+
 
 class ForcedOvertimePactAmount(Range):
     """
@@ -248,7 +245,7 @@ class ForcedOvertimePactAmount(Range):
     range_start = 0
     range_end = 2
     default = 1
-    internal_name = "ForcedOvertimePactLevel"
+
 
 class HeightenedSecurityPactAmount(Range):
     """
@@ -258,7 +255,7 @@ class HeightenedSecurityPactAmount(Range):
     range_start = 0
     range_end = 1
     default = 1
-    internal_name = "HeightenedSecurityPactLevel"
+
 
 class RoutineInspectionPactAmount(Range):
     """
@@ -268,7 +265,7 @@ class RoutineInspectionPactAmount(Range):
     range_start = 0
     range_end = 4
     default = 3
-    internal_name = "RoutineInspectionPactLevel"
+
 
 class DamageControlPactAmount(Range):
     """
@@ -278,7 +275,7 @@ class DamageControlPactAmount(Range):
     range_start = 0
     range_end = 2
     default = 1
-    internal_name = "DamageControlPactLevel"
+
 
 class ApprovalProcessPactAmount(Range):
     """
@@ -288,7 +285,7 @@ class ApprovalProcessPactAmount(Range):
     range_start = 0
     range_end = 2
     default = 1
-    internal_name = "ApprovalProcessPactLevel"
+
 
 class TightDeadlinePactAmount(Range):
     """
@@ -298,7 +295,7 @@ class TightDeadlinePactAmount(Range):
     range_start = 0
     range_end = 3
     default = 2
-    internal_name = "TightDeadlinePactLevel"
+
 
 class PersonalLiabilityPactAmount(Range):
     """
@@ -308,21 +305,20 @@ class PersonalLiabilityPactAmount(Range):
     range_start = 0
     range_end = 1
     default = 0
-    internal_name = "PersonalLiabilityPactLevel"
 
 
 # -----------------------Settings for Filler items ---------------
 
 class DarknessPackValue(Range):
     """
-    Choose the value(amount of darkness) of each darkness pack in the pool. 
+    Choose the value (amount of darkness) of each darkness pack in the pool. 
     If set to 0 Darkness will not appear in the pool.
     """
     display_name = "Darkness Pack Value"
     range_start = 0
     range_end = 10000
     default = 1000
-    internal_name = "DarknessPackValue"
+
 
 class KeysPackValue(Range):
     """
@@ -333,7 +329,7 @@ class KeysPackValue(Range):
     range_start = 0
     range_end = 500
     default = 20
-    internal_name = "KeysPackValue"
+
 
 class GemstonesPackValue(Range):
     """
@@ -344,7 +340,7 @@ class GemstonesPackValue(Range):
     range_start = 0
     range_end = 2500
     default = 100
-    internal_name = "GemstonePackValue"
+
 
 class DiamondsPackValue(Range):
     """
@@ -355,7 +351,7 @@ class DiamondsPackValue(Range):
     range_start = 0
     range_end = 100
     default = 15
-    internal_name = "DiamondsPackValue"
+
 
 class TitanBloodPackValue(Range):
     """
@@ -366,7 +362,7 @@ class TitanBloodPackValue(Range):
     range_start = 0
     range_end = 50
     default = 3
-    internal_name = "TitanBloodPackValue"
+
 
 class NectarPackValue(Range):
     """
@@ -377,7 +373,7 @@ class NectarPackValue(Range):
     range_start = 0
     range_end = 50
     default = 3
-    internal_name = "NectarPackValue"
+
 
 class AmbrosiaPackValue(Range):
     """
@@ -388,9 +384,9 @@ class AmbrosiaPackValue(Range):
     range_start = 0
     range_end = 50
     default = 3
-    internal_name = "AmbrosiaPackValue"
 
 # -----------------------Settings for Helpers -------------------------
+
 
 class FillerHelperPercentage(Range):
     """
@@ -401,7 +397,7 @@ class FillerHelperPercentage(Range):
     range_start = 0
     range_end = 100
     default = 0
-    internal_name = "FillerHelperPercentage"
+
 
 class MaxHealthHelperPercentage(Range):
     """
@@ -411,7 +407,7 @@ class MaxHealthHelperPercentage(Range):
     range_start = 0
     range_end = 100
     default = 35
-    internal_name = "MaxHealthHelperPercentage"
+
 
 class InitialMoneyHelperPercentage(Range):
     """
@@ -420,13 +416,13 @@ class InitialMoneyHelperPercentage(Range):
     What percentage remains from this and the MaxHealthHelpers will give you items that boost the 
     rarity of the boons obtained in runs.
     """
-    display_name = "Max Health Helper Percentage"
+    display_name = "Initial Money Helper Percentage"
     range_start = 0
     range_end = 100
     default = 35
-    internal_name = "InitialMoneyHelperPercentage"
 
 # -----------------------Settings for Trap -------------------------
+
 
 class FillerTrapPercentage(Range):
     """
@@ -437,42 +433,33 @@ class FillerTrapPercentage(Range):
     range_start = 0
     range_end = 100
     default = 5
-    internal_name = "FillerTrapPercentage"
 
 # -----------------------Settings for QoL -------------------------
 
-class ReverseOrderExtremeMeasure(Toggle):
+
+class ReverseOrderExtremeMeasure(DefaultOnToggle):
     """
     When true the order in which extreme meassures applied is reverse 
     so level 1 is applied to Hades, instead to Meg/The Furies). 
     For a more balanced experience.
     """
     display_name = "Reverse Order Extreme Measure"
-    option_true = 1
-    option_false = 0
-    default = 1
-    internal_name = "ReverseOrderExtremeMeasure"
 
-class IgnoreGreeceDeaths(Toggle):
+
+class IgnoreGreeceDeaths(DefaultOnToggle):
     """
     If deaths on Greece are ignored for deathlink. Leave off for the memes.
     """
     display_name = "Ignore Greece Deaths"
-    option_true = 1
-    option_false = 0
-    default = 1
-    internal_name = "IgnoreGreeceDeaths"
 
-class StoreGiveHints(Toggle):
+
+class StoreGiveHints(DefaultOnToggle):
     """
     If seeing an item on the House Contractor's shop/Fated List of Prophecies 
     should give a hint for it on the multiworld.
     """
     display_name = "Store Give Hints"
-    option_true = 1
-    option_false = 0
-    default = 1
-    internal_name = "StoreGiveHints"
+
 
 class AutomaticRoomsFinishOnHadesDefeat(Toggle):
     """
@@ -480,10 +467,7 @@ class AutomaticRoomsFinishOnHadesDefeat(Toggle):
     or all rooms clears with the equipped weapon on Room weapon based location mode. 
     """
     display_name = "Automatic Room Finish On Hades Defeat"
-    option_true = 1
-    option_false = 0
     default = 0
-    internal_name = "AutomaticRoomFinishOnHadesDefeat"
 
 
 # ------------------------------ Building dictionary ------------------------
@@ -499,7 +483,7 @@ class HadesOptions(PerGameCommonOptions):
     hidden_aspectsanity: HiddenAspectSanity
     storesanity: StoreSanity
     fatesanity: FateSanity
-    hades_defeats_needed : HadesDefeatsNeeded
+    hades_defeats_needed: HadesDefeatsNeeded
     weapons_clears_needed: WeaponsClearsNeeded
     keepsakes_needed: KeepsakesNeeded
     fates_needed: FatesNeeded
@@ -537,6 +521,69 @@ class HadesOptions(PerGameCommonOptions):
     automatic_rooms_finish_on_hades_defeat: AutomaticRoomsFinishOnHadesDefeat
     death_link: DeathLink
 
+# ------------------------------ Options groups
+
+
+hades_option_groups = [
+    OptionGroup("Game Options", [
+        InitialWeapon,
+        LocationSystem,
+        ScoreRewardsAmount,
+        KeepsakeSanity,
+        WeaponSanity,
+        HiddenAspectSanity,
+        StoreSanity,
+        FateSanity,
+        DeathLink,
+    ]),
+    OptionGroup("Goal Options", [
+        HadesDefeatsNeeded,
+        WeaponsClearsNeeded,
+        KeepsakesNeeded,
+        FatesNeeded,
+    ]),
+    OptionGroup("Heat Options", [
+        HeatSystem,
+        HardLaborPactAmount,
+        LastingConsequencesPactAmount,
+        ConvenienceFeePactAmount,
+        JurySummonsPactAmount,
+        ExtremeMeasuresPactAmount,
+        CalisthenicsProgramPactAmount,
+        BenefitsPackagePactAmount,
+        MiddleManagementPactAmount,
+        UnderworldCustomsPactAmount,
+        ForcedOvertimePactAmount,
+        HeightenedSecurityPactAmount,
+        RoutineInspectionPactAmount,
+        DamageControlPactAmount,
+        ApprovalProcessPactAmount,
+        TightDeadlinePactAmount,
+        PersonalLiabilityPactAmount,
+    ]),
+    OptionGroup("Filler Options", [
+        DarknessPackValue,
+        KeysPackValue,
+        GemstonesPackValue,
+        DiamondsPackValue,
+        TitanBloodPackValue,
+        NectarPackValue,
+        AmbrosiaPackValue
+    ]),
+    OptionGroup("Helpers and Trap Options", [
+        FillerHelperPercentage,
+        MaxHealthHelperPercentage,
+        InitialMoneyHelperPercentage,
+        FillerTrapPercentage,
+    ]),
+    OptionGroup("Quality of Life Options", [
+        ReverseOrderExtremeMeasure,
+        IgnoreGreeceDeaths,
+        StoreGiveHints,
+        AutomaticRoomsFinishOnHadesDefeat
+    ]),
+]
+
 
 # ------------------------------ Presets
 
@@ -545,7 +592,7 @@ hades_option_presets: Dict[str, Dict[str, Any]] = {
         "score_rewards_amount": 100,
         "hidden_aspectsanity": False,
         "fatesanity": False,
-        "heat_system": "reverseheat",
+        "heat_system": "reverse_heat",
         "hard_labor_pact_amount": 2,
         "lasting_consequences_pact_amount": 1,
         "convenience_fee_pact_amount": 1,
@@ -579,7 +626,7 @@ hades_option_presets: Dict[str, Dict[str, Any]] = {
         "score_rewards_amount": 100,
         "hidden_aspectsanity": True,
         "fatesanity": False,
-        "heat_system": "reverseheat",
+        "heat_system": "reverse_heat",
         "hard_labor_pact_amount": 3,
         "lasting_consequences_pact_amount": 2,
         "convenience_fee_pact_amount": 1,
@@ -611,7 +658,7 @@ hades_option_presets: Dict[str, Dict[str, Any]] = {
         "score_rewards_amount": 100,
         "hidden_aspectsanity": True,
         "fatesanity": True,
-        "heat_system": "reverseheat",
+        "heat_system": "reverse_heat",
         "hard_labor_pact_amount": 5,
         "lasting_consequences_pact_amount": 4,
         "convenience_fee_pact_amount": 2,
