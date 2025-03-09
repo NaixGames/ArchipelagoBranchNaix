@@ -103,7 +103,7 @@ class WebHostContext(Context):
     def load(self, room_id: int):
         self.room_id = room_id
         room = Room.get(id=room_id)
-        if room.last_port:
+        if room.last_port and (room.last_port <= 65535) and (room.last_port >= 65530):
             self.port = room.last_port
         else:
             self.port = get_random_port()
