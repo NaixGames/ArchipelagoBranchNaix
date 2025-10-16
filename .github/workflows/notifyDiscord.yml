@@ -5,7 +5,7 @@ on: push
 
 
 jobs:
-  if: github.ref_name == 'PersonalWebHost'
+  if: ${{ github.ref == 'refs/heads/PersonalWebHost' }}
   build:
     runs-on: ubuntu-latest
     steps:
