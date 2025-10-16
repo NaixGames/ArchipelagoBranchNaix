@@ -1,12 +1,11 @@
 name: Naix Discord notify
 
-on:
-  push:
-    branches:
-      -"PersonalWebHost"
+on: push
+
 
 
 jobs:
+  if: github.ref_name == 'PersonalWebHost'
   build:
     runs-on: ubuntu-latest
     steps:
