@@ -1,0 +1,13 @@
+[Unit]
+Description=Flask instance to serve app rooms
+After=network.target
+
+[Service]
+User=naix99
+Group=www-data
+WorkingDirectory=/home/naix99/ArchipelagoPersonalHost/ArchipelagoBranchNaix
+Environment="Path=/home/naix99/ArchipelagoPersonalHost/ArchipelagoBranchNaix/env/bin"
+ExecStart=sudo /home/naix99/ArchipelagoPersonalHost/ArchipelagoBranchNaix/env/bin/python WebHost.py --config_override selflaunch.yaml
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve the app server
+After=network.target
+
+[Service]
+User=naix99
+Group=www-data
+WorkingDirectory=/home/naix99/ArchipelagoPersonalHost/ArchipelagoBranchNaix
+Environment="Path=/home/naix99/ArchipelagoPersonalHost/ArchipelagoBranchNaix/env/bin"
+ExecStart=/home/naix99/ArchipelagoPersonalHost/ArchipelagoBranchNaix/env/bin/gunicorn --bind unix:appserver.sock -c gunicorn.conf.py
+
+[Install]
+WantedBy=multi-user.target

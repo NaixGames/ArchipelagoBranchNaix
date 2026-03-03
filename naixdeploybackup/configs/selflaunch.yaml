@@ -1,0 +1,20 @@
+# Refer to ../docs/webhost configuration sample.yaml
+
+# We'll be hosting VIA gunicorn
+SELFHOST: false
+# Start room and generator processes
+SELFLAUNCH: true
+JOB_THRESHOLD: 0
+
+# Maximum concurrent world gens
+GENERATORS: 2
+
+# Rooms will be spread across multiple processes
+HOSTERS: 8
+
+HOST_ADDRESS: naixmultiworld.duckdns.org
+PORT: 80
+
+
+#SELFLAUNCHCERT: /etc/letsencrypt/live/naixmultiworld.duckdns.org/fullchain.pem
+#SELFLAUNCHKEY: /etc/letsencrypt/live/naixmultiworld.duckdns.org/privkey.pem
